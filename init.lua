@@ -17,7 +17,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-
+--
 -- VIMSNIP
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -38,9 +38,6 @@ Plug 'HiPhish/rainbow-delimiters.nvim'
 
 -- Autopairs 
 Plug "windwp/nvim-autopairs"
-
--- Quick Comments
-Plug "numToStr/Comment.nvim"
 
 vim.call('plug#end') ------ Add plugins above here
 
