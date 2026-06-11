@@ -29,6 +29,16 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 
+--- Rainbow Indents
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'TheGLander/indent-rainbowline.nvim'
+
+-- Rainbow Brackets
+Plug 'HiPhish/rainbow-delimiters.nvim'
+
+-- Autopairs 
+Plug "windwp/nvim-autopairs"
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
@@ -40,3 +50,6 @@ require"vimtree"
 require"lualine"
 require"cmp-lsp"
 require"mason-config"
+require"rainbow-indent"
+require"rainbow-bracket"
+require"autopairs"
