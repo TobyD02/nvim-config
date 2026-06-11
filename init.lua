@@ -39,6 +39,9 @@ Plug 'HiPhish/rainbow-delimiters.nvim'
 -- Autopairs 
 Plug "windwp/nvim-autopairs"
 
+-- Quick Comments
+Plug "numToStr/Comment.nvim"
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
@@ -53,3 +56,4 @@ require"mason-config"
 require"rainbow-indent"
 require"rainbow-bracket"
 require"autopairs"
+require"quick-comment"
