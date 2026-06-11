@@ -39,8 +39,26 @@ fc-cache -fv
 - Open tree `\e`
 - Shift Window Focus `Ctrl + w` -> `h` (left), `l` (right), `j` (down), `k` (right)
     - Arrow keys work also following the `Ctrl + w`
+- `\d` when hovering an error explains itself
+- `gd` when hovering a function goes to definition
+- `gr` when hovering a function gets a list of references
+- `Shift k` when hovering a function shows its docs
+- `Ctrl o` goes back (i.e. to previous place after `gd` or `gr`
+- `Ctrl i` goes forward (i.e. after `Ctrl o`)
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want
 - Run `:MasonInstall <your-lsp-here>` to install
     - i.e. `:MasonInstall pyright`
+- Alternatively, navigate to `./mason-config.lua` and add your lsp in there:
+```lua
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"pyright",
+        -- Add your lsp here to make sure its installed
+	}
+})
+
+vim.lsp.config("pyright", {}) -- Configure your lsp
+```
+
