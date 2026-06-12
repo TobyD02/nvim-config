@@ -22,3 +22,6 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 
 vim.opt.fileformat = "unix"
+
+-- yank to clipboard
+vim.opt.clipboard = "unnamedplus"
