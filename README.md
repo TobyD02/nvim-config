@@ -59,7 +59,9 @@ require("mason-lspconfig").setup({
         -- Add your lsp here to make sure its installed
 	}
 })
-
-vim.lsp.config("pyright", {}) -- Configure your lsp
+```
+- Then  in cmp-lsp, at the bottom add:
+```lua
+lsp("intelephense")
 ```
 
