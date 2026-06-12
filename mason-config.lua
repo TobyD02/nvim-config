@@ -15,8 +15,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"pyright"
+		"pyright",
+		"rust_analyzer",
+		"gopls",
+		"lua_ls",
+		"ts_ls"
 	}
 })
-
-vim.lsp.config("pyright", {})

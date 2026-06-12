@@ -32,7 +32,27 @@ local function lsp(server, opts)
   vim.lsp.enable(server)
 end
 
+-- Search completion (/ and ?)
+cmp.setup.cmdline({ "/", "?" }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = "buffer" }
+  }
+})
+
+-- Command-line completion (:)
+cmp.setup.cmdline(":", {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = "path" }
+  }, {
+    { name = "cmdline" }
+  })
+})
+
 -- EXAMPLE servers (replace/remove as needed)
 lsp("lua_ls")
 lsp("pyright")
 lsp("ts_ls")
+lsp("rust_analyzer")
+lsp("gopls")
