@@ -3,10 +3,10 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin') ---- Add plugins below here
 
-Plug('olimorris/onedarkpro.nvim')
-Plug('nvim-tree/nvim-tree.lua')
-Plug('nvim-tree/nvim-web-devicons')
-Plug('nvim-lualine/lualine.nvim')
+Plug'olimorris/onedarkpro.nvim'
+Plug'nvim-tree/nvim-tree.lua'
+Plug'nvim-tree/nvim-web-devicons'
+Plug'nvim-lualine/lualine.nvim'
 
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
@@ -47,7 +47,7 @@ package.path = home .. "/.config/nvim/?.lua;" .. package.path
 require"common"
 require"theme"
 require"vimtree"
-require"lualine"
+require"lualine-config"
 require"cmp-lsp"
 require"mason-config"
 require"rainbow-indent"
