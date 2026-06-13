@@ -58,6 +58,9 @@ Plug 'nvim-lua/plenary.nvim'
 -- Gitsigns
 Plug'lewis6991/gitsigns.nvim'
 
+--
+Plug'MeanderingProgrammer/render-markdown.nvim'
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
