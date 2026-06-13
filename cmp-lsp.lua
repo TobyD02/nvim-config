@@ -55,5 +55,32 @@ lsp("lua_ls")
 lsp("pyright")
 lsp("ts_ls")
 lsp("rust_analyzer")
-lsp("gopls")
 lsp("intelephense")
+
+-- Go Stuff
+--- Setup LSP settings
+lsp("gopls", {
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+      },
+      staticcheck = true,
+    },
+  },
+})
+
+-- On save - organise imports and format code
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+    vim.lsp.buf.code_action({
+      context = { only = { "source.organizeImports" } },
+      apply = true,
+    })
+  end,
+})
