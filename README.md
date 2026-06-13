@@ -11,6 +11,8 @@ Simply add clone this repo to `~/.config/nvim` (The contents of the repo are wha
     - [kitty](https://sw.kovidgoyal.net/kitty/binary/)
     - [wezterm](https://wezterm.org/installation.html)
 
+***NOTE*** - In order for telescope to work properly, you will need to [install ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+
 ### Ubuntu
 ```shell
 fc-list # Use this to find where your fonts are installed
@@ -49,7 +51,12 @@ fc-cache -fv
 - In Normal Mode:
     - `TAB` -> next tab along
     - `Shift + TAB` -> previous tab along
+- `\ w` - Close a tab (from those listed at the top) 
 - `Ctrl \` Opens floating terminal
+- `\ p` - Opens a command palette
+- `Ctrl f` - Find string in files
+- `Ctrl p` - Find a file
+- `\ fw` - Find a word in files
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want

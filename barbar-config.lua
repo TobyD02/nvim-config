@@ -6,3 +6,5 @@ map('n', '<Tab>', '<Cmd>BufferNext<CR>', opts)
 
 -- Shift+Tab = previous buffer
 map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', opts)
+
+map('n', '<leader>w', '<Cmd>BufferClose<CR>', opts)
