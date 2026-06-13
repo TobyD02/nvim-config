@@ -3,7 +3,13 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin') ---- Add plugins below here
 
+-- THEMES
 Plug'olimorris/onedarkpro.nvim'
+Plug'rebelot/kanagawa.nvim'
+Plug'ellisonleao/gruvbox.nvim'
+Plug'AlexvZyl/nordic.nvim'
+---
+
 Plug'nvim-tree/nvim-tree.lua'
 Plug'nvim-tree/nvim-web-devicons'
 Plug'nvim-lualine/lualine.nvim'
@@ -17,7 +23,6 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
---
 -- VIMSNIP
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
@@ -39,6 +44,9 @@ Plug 'HiPhish/rainbow-delimiters.nvim'
 -- Autopairs 
 Plug "windwp/nvim-autopairs"
 
+--- Barbar
+Plug 'romgrk/barbar.nvim'
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
@@ -54,3 +62,4 @@ require"rainbow-indent"
 require"rainbow-bracket"
 require"autopairs"
 require"quick-comment"
+require"barbar-config"

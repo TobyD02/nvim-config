@@ -46,6 +46,9 @@ fc-cache -fv
 - `Ctrl o` goes back (i.e. to previous place after `gd` or `gr`
 - `Ctrl i` goes forward (i.e. after `Ctrl o`)
 - `Ctrl /` comments selected lines
+- In Normal Mode:
+    - `TAB` -> next tab along
+    - `Shift + TAB` -> previous tab along
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want
