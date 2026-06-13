@@ -57,6 +57,7 @@ fc-cache -fv
 - `Ctrl f` - Find string in files
 - `Ctrl p` - Find a file
 - `\ fw` - Find a word in files
+- `\ nf` - Create a new file in current dir of file you are editing
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want
