@@ -66,11 +66,11 @@ require('nordic').setup({
     -- Visual selection options.
     visual = {
         -- Bold font in visual selection.
-        bold = false,
+        bold = true,
         -- Bold visual selection number.
         bold_number = true,
         -- Available styles: 'dark', 'light'.
-        theme = 'dark',
+        theme = 'light',
         -- Blending the visual selection bg with the buffer bg.
         blend = 0.85,
     },
@@ -84,7 +84,7 @@ require('nordic').setup({
     },
     leap = {
         -- Dims the backdrop when using leap.
-        dim_backdrop = false,
+        dim_backdrop = true,
     },
     ts_context = {
         -- Enables dark background for treesitter-context window
