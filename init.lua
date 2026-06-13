@@ -55,6 +55,9 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
+-- Gitsigns
+Plug'lewis6991/gitsigns.nvim'
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
@@ -73,3 +76,4 @@ require"quick-comment"
 require"barbar-config"
 require"toggleterm-config"
 require"telescope-config"
+
