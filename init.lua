@@ -47,6 +47,9 @@ Plug "windwp/nvim-autopairs"
 --- Barbar
 Plug 'romgrk/barbar.nvim'
 
+--- Toggleterm
+Plug 'akinsho/toggleterm.nvim'
+
 vim.call('plug#end') ------ Add plugins above here
 
 home=os.getenv("HOME")
@@ -63,3 +66,4 @@ require"rainbow-bracket"
 require"autopairs"
 require"quick-comment"
 require"barbar-config"
+require"toggleterm-config"

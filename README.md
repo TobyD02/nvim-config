@@ -49,6 +49,7 @@ fc-cache -fv
 - In Normal Mode:
     - `TAB` -> next tab along
     - `Shift + TAB` -> previous tab along
+- `Ctrl \` Opens floating terminal
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want
