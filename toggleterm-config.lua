@@ -4,6 +4,6 @@ require("toggleterm").setup({
   shade_terminals = false,
   float_opts = {
 	  border = "curved",
-	  winblend = 50
+	  winblend = 20
   }
 })
