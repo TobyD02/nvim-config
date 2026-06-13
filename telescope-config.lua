@@ -6,13 +6,19 @@ map('n', '<C-f>', '<cmd>Telescope live_grep<cr>', opts)
 map('n', '<leader>fw', '<cmd>Telescope grep_string<cr>', opts)
 map('n', '<leader>p', '<cmd>Telescope commands<cr>', opts)
 
-map('n', '<leader>nf', function()
+vim.keymap.set('n', '<leader>nf', function()
   local dir = vim.fn.expand("%:p:h")
 
-  vim.ui.input({ prompt = "New file: " }, function(input)
+  vim.ui.input({ prompt = "New file (e.g. utils/helpers.go): " }, function(input)
     if not input or input == "" then return end
 
-    local path = dir .. "/" .. input
-    vim.cmd("edit " .. path)
+    local full_path = dir .. "/" .. input
+    local parent_dir = vim.fn.fnamemodify(full_path, ":h")
+
+    -- 🧠 create directories if they don't exist
+    vim.fn.mkdir(parent_dir, "p")
+
+    -- open file
+    vim.cmd("edit " .. full_path)
   end)
-end, opts)
+end, { noremap = true, silent = true })

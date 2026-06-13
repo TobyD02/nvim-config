@@ -56,6 +56,9 @@ lsp("pyright")
 lsp("ts_ls")
 lsp("rust_analyzer")
 lsp("intelephense")
+lsp("docker_compose_language_service", {
+  filetypes = { "yaml", "yaml.docker-compose" },
+})
 
 -- Go Stuff
 --- Setup LSP settings

@@ -25,3 +25,10 @@ vim.opt.fileformat = "unix"
 
 -- yank to clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Set docker-compose filetype:
+vim.filetype.add({
+  pattern = {
+    [".*docker%-compose.*%.ya?ml"] = "yaml.docker-compose",
+  },
+})

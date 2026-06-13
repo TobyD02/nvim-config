@@ -20,6 +20,7 @@ require("mason-lspconfig").setup({
 		"gopls",
 		"lua_ls",
 		"ts_ls",
-		"intelephense"
+		"intelephense",
+		"docker_compose_language_service",
 	}
 })
