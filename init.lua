@@ -53,13 +53,16 @@ Plug 'akinsho/toggleterm.nvim'
 
 -- Telescope
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/plenary.nvim' -- Dependency for multiple plugins, including kulala.nvim
 
 -- Gitsigns
 Plug'lewis6991/gitsigns.nvim'
 
---
+-- Render Markdown
 Plug'MeanderingProgrammer/render-markdown.nvim'
+
+-- HTTP Client Files
+Plug 'mistweaverco/kulala.nvim'
 
 vim.call('plug#end') ------ Add plugins above here
 
@@ -79,4 +82,4 @@ require"quick-comment"
 require"barbar-config"
 require"toggleterm-config"
 require"telescope-config"
-
+require"kulala-config"

@@ -13,6 +13,10 @@ Simply add clone this repo to `~/.config/nvim` (The contents of the repo are wha
 
 ***NOTE*** - In order for telescope to work properly, you will need to [install ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 
+**NOTE*** - In order for kulala (http client files) to work, you will need to install [tree-sitter (cli)](https://github.com/tree-sitter/tree-sitter/releases)
+    - This can be installed via the binaries in the releases linked, cargo, npm (recommended), and many other package managers
+    - Cargo installation: `npm install -g tree-sitter-cli`
+
 ### Ubuntu
 ```shell
 fc-list # Use this to find where your fonts are installed
@@ -58,6 +62,9 @@ fc-cache -fv
 - `Ctrl p` - Find a file
 - `\ fw` - Find a word in files
 - `\ nf` - Create a new file in current dir of file you are editing
+- `\ rr` - Run the HTTP Request your cursor is placed at (in http client file)
+- `\ ra` - Run all HTTP Requests in the current file (in http client file)
+- `\ ro` - Open Kulala UI (HTTP Requests)
 
 ## LSP
 - Run the command `:Mason` to see available LSP, find the name of the one you want

@@ -51,7 +51,23 @@ cmp.setup.cmdline(":", {
 })
 
 -- EXAMPLE servers (replace/remove as needed)
-lsp("lua_ls")
+lsp("lua_ls", {
+	settings = {
+		Lua = {
+		  runtime = {
+			version = "LuaJIT",
+		  },
+		  diagnostics = {
+			globals = { "love" },
+		  },
+		  workspace = {
+			library = {
+			  [vim.fn.expand("~/.local/share/love2d-library")] = true,
+			},
+		  },
+		},
+	  },
+})
 lsp("pyright")
 lsp("ts_ls")
 lsp("rust_analyzer")
