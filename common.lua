@@ -32,3 +32,6 @@ vim.filetype.add({
     [".*docker%-compose.*%.ya?ml"] = "yaml.docker-compose",
   },
 })
+
+vim.opt.spell = true
+vim.opt.spelllang = {"en_gb"}
