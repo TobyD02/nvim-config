@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local lspconfig = require("lspconfig")
 
 cmp.setup({
 	snippet = {
@@ -36,22 +37,23 @@ end
 cmp.setup.cmdline({ "/", "?" }, {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
-		{ name = "buffer" }
-	}
+		{ name = "buffer" },
+	},
 })
 
 -- Command-line completion (:)
 cmp.setup.cmdline(":", {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({
-		{ name = "path" }
+		{ name = "path" },
 	}, {
-		{ name = "cmdline" }
-	})
+		{ name = "cmdline" },
+	}),
 })
 
 -- EXAMPLE servers (replace/remove as needed)
 lsp("lua_ls", {
+	root_dir = vim.fn.getcwd(),
 	settings = {
 		Lua = {
 			runtime = {
@@ -61,6 +63,7 @@ lsp("lua_ls", {
 				globals = { "love" },
 			},
 			workspace = {
+				checkThirdParty = false,
 				library = {
 					[vim.fn.expand("~/.local/share/love2d-library")] = true,
 				},
@@ -94,7 +97,6 @@ lsp("gopls", {
 		},
 	},
 })
-
 
 -- Specific golang on save format
 vim.api.nvim_create_autocmd("BufWritePre", {
